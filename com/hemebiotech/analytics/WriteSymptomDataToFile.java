@@ -13,7 +13,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
      * Default constructor with a default file path.
      */
     public WriteSymptomDataToFile() {
-        this.filepath = "default_output_path.txt";
+        this.filepath = "result.out";
     }
 
     /**
