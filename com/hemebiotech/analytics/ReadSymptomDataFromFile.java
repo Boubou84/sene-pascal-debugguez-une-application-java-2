@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
+
 
 /**
  * Simple brute force implementation
@@ -27,9 +29,10 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		ArrayList<String> result = new ArrayList<String>();
 		
 		if (filepath != null) {
+      BufferedReader reader = null;
 			try {
-				BufferedReader reader = new BufferedReader (new FileReader(filepath));
-				String line = reader.readLine();
+				 reader = new BufferedReader (new FileReader(filepath));
+				 String line = reader.readLine();
 				
 				while (line != null) {
 					result.add(line);
@@ -37,11 +40,24 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				}
 				reader.close();
 			} catch (IOException e) {
-				e.printStackTrace();
+				System.out.println("Erreur lors de la lecture des symptômes: Veuillez vérifier l'emplacement du fichier ");
 			}
-		}
-		
-		return result;
-	}
+			finally {
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        Collections.sort(result); // Tri la liste des symptôms par ordre alphabétique ! 
+        return result;
+    }
 
 }
+
+
+
+
