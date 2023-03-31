@@ -57,28 +57,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
         return result;
     }
 
-private Map<String, Integer> countSymptomOccurrences(List<String> symptoms) {
-		Map<String, Integer> symptomOccurrences = new TreeMap<>();
-
-		for (String symptom : symptoms) {
-			symptomOccurrences.put(symptom, symptomOccurrences.getOrDefault(symptom, 0) + 1);
-		}
-		
-    System.out.println("Occurrences des symptômes comptées : " + symptomOccurrences);
-    return symptomOccurrences;
-	}
-
-	public static void main(String[] args) {
-		ReadSymptomDataFromFile symptomReader = new ReadSymptomDataFromFile("Symptoms.txt");
-		List<String> symptoms = symptomReader.getSymptoms();
-		System.out.println("Symptômes lus depuis le fichier : " + symptoms);
-
-		Map<String, Integer> symptomOccurrences = symptomReader.countSymptomOccurrences(symptoms);
-
-		WriteSymptomDataToFile symptomWriter = new WriteSymptomDataToFile("result.out");
-		symptomWriter.writeSymptoms(symptomOccurrences);
-    		System.out.println("Symptômes et occurrences écrits dans le fichier de sortie");
-	}
 }
 
 

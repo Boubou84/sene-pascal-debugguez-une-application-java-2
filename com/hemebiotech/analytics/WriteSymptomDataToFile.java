@@ -29,8 +29,8 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
         if (filepath != null && symptoms != null) {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
                 for (Map.Entry<String, Integer> entry : symptoms.entrySet()) {
-                    writer.write(entry.getKey() + ": " + entry.getValue());
-                    writer.newLine();
+                    writer.write(entry.getKey() + " : " + entry.getValue());
+                    writer.write("\n");
                 }
             } catch (IOException e) {
                 System.err.println("Error while writing symptoms to file : " + e.getMessage());
