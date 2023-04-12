@@ -2,11 +2,14 @@ package com.hemebiotech.analytics;
 
 import java.util.Map;
 
-
 /**
- * Anything the will write symptom data on a valid data output format
- *
+ * Interface pour écrire les données des symptômes dans une destination.
  */
 public interface ISymptomWriter {
-// WRITE YOUR CODE HERE
-}
+  /**
+  * Écrit les symptômes et leurs occurrences dans la destination.
+  *
+  * @param symptoms une Map contenant les symptômes et leurs occurrences.
+  */
+  void writeSymptoms(Map<String, Integer> symptoms);
+
