@@ -7,17 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Implémentation simple de force brute.
- */
+  * Implémentation simple de force brute.
+  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
   private String filepath;
 
   /**
-   * Constructeur.
-   *
-   * @param filepath un chemin complet ou partiel vers un fichier contenant des chaînes de symptômes,
-   *                 une par ligne.
-   */
+  * Constructeur.
+  *
+  * @param filepath un chemin vers la liste des symptômes.
+  */
   public ReadSymptomDataFromFile(String filepath) {
     this.filepath = filepath;
   }
