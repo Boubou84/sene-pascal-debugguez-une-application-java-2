@@ -3,13 +3,13 @@ package com.hemebiotech.analytics;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Classe principale du programme, elle lit la liste des symptômes depuis un fichier texte
+ * utilise la classe AnalyticsCounter pour compter le nombre d'occurrences de chaque symptôme
+ * puis écrit les résultats dans le fichier de sortie.
+ */
 public class Main {
 
-  /**
-   * Point d'entrée de l'application.
-   *
-   * @param args arguments de la ligne de commande
-   */
   public static void main(String[] args) {
     // Définir les chemins des fichiers d'entrée et de sortie
     String inputPath = "symptoms.txt";

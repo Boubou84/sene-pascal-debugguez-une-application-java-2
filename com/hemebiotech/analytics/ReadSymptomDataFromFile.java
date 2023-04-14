@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-  * Implémentation simple de force brute.
+  * Implémentation de l'interface ISymptomReader pour lire
+  * les symptômes à partir d'un fichier.
   */
 public class ReadSymptomDataFromFile implements ISymptomReader {
   private String filepath;

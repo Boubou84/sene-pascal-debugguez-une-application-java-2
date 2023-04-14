@@ -4,6 +4,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Cette classe compte le nombre d'occurrences de symptômes dans une liste de symptômes.
+ * Les symptômes sont stockés dans un fichier texte.
+ * Les résultats sont stockés dans le fichier de sortie et chaque symptôme et 
+ * son nombre d'occurrences sont sur une ligne différentes.
+ */
+
 public class AnalyticsCounter {
   private ISymptomReader reader;
   private ISymptomWriter writer;
